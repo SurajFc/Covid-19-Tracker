@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./style/App.css";
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import News from "./pages/News";
+import Country from "./pages/Country";
+
+import getVirusGloballAll from "./store/actions/virusActions";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getVirusGloballAll());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div className="main">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/news" component={News} />
+          <Route exact path="/country/:slug" component={Country} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

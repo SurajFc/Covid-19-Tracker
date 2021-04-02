@@ -1,0 +1,141 @@
+/* .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 769px) {
+  .Navbar {
+    background: #f6f6f7;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    min-width: 5rem;
+    position: fixed;
+    z-index: 999;
+  }
+  .Navbar .navbar-bottom {
+    margin-bottom: 0.5rem;
+    margin-top: auto;
+    order: 3;
+    text-align: center;
+  }
+  .Navbar .navbar-top {
+    font-size: 0.6rem;
+    order: 1;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+    width: 46px;
+    word-wrap: break-word;
+  }
+  .Navbar .navbar-middle {
+    align-items: center;
+    background: #f6f6f7;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .Navbar .navbar-middle span {
+    display: flex;
+    flex-direction: row;
+    height: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.Navbar {
+  align-items: center;
+  display: flex;
+}
+
+.Navbar .navbar-bottom {
+  color: rgba(108, 117, 125, 0.6);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1.5rem;
+  width: 3rem;
+}
+
+.Navbar .navbar-top {
+  color: #6c757d;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.Navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Navbar .navbar-top span {
+  color: #4c75f2;
+}
+
+.Navbar .navbar-middle {
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1.5rem;
+  text-align: center;
+  width: 3rem;
+} */
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 18%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 20%; /* Same as the width of the sidenav */
+  margin-right: 2%;
+  margin-top: 3%;
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.active {
+  color: aquamarine !important;
+}
+
+.judJDM {
+  justify-content: center !important;
+}
